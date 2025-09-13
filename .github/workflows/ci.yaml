@@ -24,7 +24,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: xuananhdocker/crawler-website
+          images: ${{ secrets.DOCKER_USERNAME }}/crawler-website
           tags: |
             type=raw,value={{date 'YYYY-MM-DD'}}
       - name: Build and push Docker image
